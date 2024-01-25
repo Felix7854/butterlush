@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.header {
+    font-family: 'Roboto', sans-serif;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+}
+
+.adjust {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2px;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.products {
+    display: flex;
+    column-gap: 23px;
+    margin-top: -16px;
+    /* justify-content: space-around;
+    gap: 5px; */
+}
+
+.add-product{
+    margin-top: 10px;
+}
+
+.cancel {
+    margin-top: 24px;
+}
+
+/* mobile view */
+
+@media only screen and (max-width: 600px) {
+    .products {
+        display: flex;
+        column-gap: 7px;
+        margin-top: -16px;
+    }
+
+    .productControl{
+        width: 60%;
+    }
+
+    input::placeholder {
+        font-size: 14px;
+    }
+
+    .custom-font-size {
+        font-size: 14px; 
+      }
+
+      button {
+        font-size: 14px;
+      }
+  }
