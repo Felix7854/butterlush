@@ -91,6 +91,6 @@ export class AppComponent implements OnInit {
       'Delivery : ' +
       this.modeOfPickup;
 
-    // window.open(whatsAppUrl, '_blank').focus();
+    window.open(whatsAppUrl, '_blank').focus();
   }
 }
