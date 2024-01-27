@@ -25,15 +25,13 @@ p {
 .product{
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
 }
 
 .products {
     display: flex;
     column-gap: 23px;
-    margin-top: -16px;
-    /* justify-content: space-around;
-    gap: 5px; */
+        margin-top: 5px;
+    
 }
 
 .add-product{
@@ -41,7 +39,7 @@ p {
 }
 
 .cancel {
-    margin-top: 24px;
+    margin-top: 31px;
 }
 
 /* mobile view */
@@ -50,22 +48,29 @@ p {
     .products {
         display: flex;
         column-gap: 7px;
-        margin-top: -16px;
     }
 
     .productControl{
         width: 60%;
     }
+    label  {
+        font-size: 13px;
+    }
 
     input::placeholder {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .custom-font-size {
-        font-size: 14px; 
+        font-size: 10px; 
+      }
+
+      .add-width{
+        width: 54px;
       }
 
       button {
-        font-size: 14px;
+        font-size: 10px;
+        margin-left: 10px;
       }
   }
