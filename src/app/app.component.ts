@@ -11,7 +11,6 @@ import { FormGroup } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   submitForm: FormGroup;
-  isGood = false;
   isVisible = false;
   index: number;
   username: string;
@@ -19,7 +18,7 @@ export class AppComponent implements OnInit {
   product: string;
   date: string;
   modeOfPickup: string;
-  amount: string;
+  amount = [];
 
   ngOnInit(): void {
     this.submitForm = new FormGroup({
@@ -53,14 +52,25 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
+    // console.log(this.submitForm);
     this.onwhatsApp();
   }
 
   onwhatsApp() {
+    const productControl = (<FormArray>this.submitForm.get('products')).value;
+
+    const keyValuePairs = productControl.map((product, index) => {
+      const separator = index < productControl.length - 1 ? '\n' : '';
+      return `product: ${product.product}, number: ${product.amount}${separator}`;
+    });
+    
+    // Join the array into a single string
+    this.product = keyValuePairs.join('');
+
+
     this.username = this.submitForm.value.name;
     this.contact = this.submitForm.value.contact;
-    this.product = this.submitForm.value.products[0].product;
-    this.amount = this.submitForm.value.products[0].amount;
+    
     this.date = this.submitForm.value.date;
     this.modeOfPickup = this.submitForm.value.modeofPickp;
 
@@ -77,12 +87,10 @@ export class AppComponent implements OnInit {
       '%0a' +
       'Products: ' +
       this.product +
-      ' = ' +
-      this.amount +
       '%0a' +
       'Delivery : ' +
       this.modeOfPickup;
 
-    window.open(whatsAppUrl, '_blank').focus();
+    // window.open(whatsAppUrl, '_blank').focus();
   }
 }
