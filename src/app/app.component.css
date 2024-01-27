@@ -62,15 +62,15 @@ p {
     }
 
     .custom-font-size {
-        font-size: 10px; 
+        font-size: 12px; 
       }
 
       .add-width{
-        width: 54px;
+        width: 58px;
       }
 
       button {
-        font-size: 10px;
+        font-size: 12px;
         margin-left: 10px;
       }
   }
