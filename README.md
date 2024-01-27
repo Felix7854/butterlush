@@ -1,4 +1,4 @@
-# ButterlashApp
+# ButterlushApp
 
 Creating a web page for buying products from butterlash 
 
